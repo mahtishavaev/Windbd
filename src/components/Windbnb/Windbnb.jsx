@@ -1,5 +1,4 @@
-import { debounce, throttle } from 'lodash'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment,  useState } from 'react'
 import { Header } from '../Header/Header'
 import { Stay } from '../Stay/Stay'
 import styles from './Windbnb.module.scss'
@@ -37,7 +36,6 @@ export const Windbnb = ({ json }) => {
     result = filterByGuests(result, guestsFilter)
     setStays(result)
   }
-
 
   return (
     <Fragment>
