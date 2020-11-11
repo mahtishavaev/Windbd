@@ -1,0 +1,295 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;  
+  background: #fff;
+}
+.inner {
+  padding: 30px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchBar {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.location {
+  padding: 15px;
+  font-size: 14px;
+  color: #bdbdbd;
+  cursor: pointer;
+  border-radius: 16px;
+  position: relative;
+  border: 1px solid transparent;
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #f2f2f2;
+  }
+  &:hover {
+    border: 1px solid black;
+  }
+}
+.guests {
+  padding: 15px;
+  font-size: 14px;
+  color: #bdbdbd;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 16px;
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #f2f2f2;
+  }
+
+  &:hover {
+    border: 1px solid black;
+  }
+}
+.btn {
+  padding: 13px;
+  display: inline-flex;
+  cursor: pointer;
+  color: #eb5757;
+  user-select: none;
+}
+
+
+.overlay{
+  background: rgba(79, 79, 79, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.expanded {
+  &.inner {
+    flex-direction: column;
+  }
+  .logo {
+    display: none;
+  }
+  .searchBar {
+    width: 100%;
+  }
+  .location {
+    width: 35%;
+    &::before{
+      display: block;
+      content: 'LOCATION';
+      color: #333333;
+      font-size: 9px;
+      font-weight: 800;
+    }
+  }
+  .guests {
+    width: 35%;
+    &::before{
+      display: block;
+      content: 'GUESTS';
+      color: #333333;
+      font-size: 9px;
+      font-weight: 800;
+    }
+  }
+  .btn {
+    margin: 0 auto;
+    color: #fff;
+    background: #eb5757;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 12px 25px;
+    span {
+      font-size: 18px;
+    }
+    &::after {
+      content: "Search";
+      display: inline-block;
+      margin-left: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #f2f2f2;
+    }
+  }
+}
+
+.searchParams {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.locationsList {
+  width: 35%;
+}
+
+.locationItem {
+  margin-left: 10px;
+  margin-right: 50px;
+  color: #4f4f4f;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 16px;
+  padding: 15px;
+  span {
+    margin-right: 5px;
+  }
+  i {
+    margin-left: auto;
+  }
+  &:hover {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.guestsSearchParams{
+  margin-left: 35%;
+  padding: 15px;
+  padding-left: 25px;
+}
+
+.guestsAgeTitle {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.guestsAgeText {
+  font-size: 14px;
+  color: #bdbdbd;
+  margin-bottom: 10px;
+}
+
+.guestsCtrl{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.guestsBtn {
+  width: 23px;
+  height: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #828282;
+  color: #828282;
+  border-radius: 4px;
+  margin-right: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.guestsCounter{
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 15px;
+
+}
+
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 576px;
+  }
+  .inner {
+    flex-direction: column;
+  }
+  .searchBar{
+    width: 100%;
+  }
+  .location{
+    padding: 12px;
+    width: 35%;
+  }
+  .guests{
+    width: 35%;
+    padding: 12px;
+  }
+  .btn{
+    margin: auto;
+  }
+  .logo{
+    margin-bottom: 15px;
+    align-self: flex-start;
+  }
+  .expanded{
+    .searchBar{
+      flex-direction: column;
+    }
+    .location{
+      width: 100%;
+    }
+    .guests{
+      width: 100%;
+    }
+    .btn{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 30px;
+    }
+  }
+  .locationsList {
+    width: 100%;
+  }
+  .locationItem{
+    margin: 0;
+  }
+  .guestsSearchParams{
+    margin-left: 0;
+  }
+  .searchParams{
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  
+}

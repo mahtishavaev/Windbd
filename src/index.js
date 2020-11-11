@@ -4,6 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// export const functionName = () => {
+//   let json = [{
+//     'superHost':false
+//   }]
+//   console.log(json);
+//   json[0].superHost = true
+//   console.log(json);
+// };
+
+// functionName()
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
