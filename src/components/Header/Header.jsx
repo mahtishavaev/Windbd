@@ -73,7 +73,10 @@ export const Header = ({ stays, filterStays }) => {
 
       {
         menuExpanded
-          ? <div className={styles.overlay}></div>
+          ? <div
+            className={styles.overlay}
+            onClick={() => setMenuExpanded(false)}
+          ></div>
           : null
       }
 
