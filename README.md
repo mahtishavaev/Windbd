@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://friendly-raman-52c2de.netlify.app/">
+    <a href="https://mahti-windbnb-app.netlify.app/">
       Demo
     </a>
     <span> | </span>
