@@ -12,8 +12,10 @@ export const Stay = ({ ...stay }) => {
         </div>
         <div className={styles.info}>
           {stay.superHost && <div className={styles.superHost}>Super Host</div>}
-          <span className={styles.type}>{stay.type}</span>
-          <span className={styles.beds}>{stay.beds} beds</span>
+          <span className={styles.type}>{stay.type}
+          {stay.beds && <span className={styles.beds}>{stay.beds} beds</span>}
+          </span>
+          
           <div className={styles.rating}>
             <span className="material-icons">star_rate</span>
             {stay.rating}

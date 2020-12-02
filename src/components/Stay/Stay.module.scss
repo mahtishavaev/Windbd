@@ -27,7 +27,7 @@
   display: flex;
   margin-top: 15px;
   margin-bottom: 12px;
-  align-items: center;
+  align-items: flex-start;
   min-height: 30px;
 }
 .superHost {
@@ -40,6 +40,7 @@
   border-radius: 12px;
   padding: 5px 8px;
   margin-right: 10px;
+  min-width: 88px;
 }
 
 .type {
@@ -67,30 +68,35 @@
   display: inline-flex;
   align-items: center;
   margin-left: auto;
-  span{
+  span {
     margin-right: 5px;
-    color: #EB5757;
+    color: #eb5757;
     font-size: 18px;
   }
 }
 
 @media (max-width: 1199.98px) {
-  
 }
 
 @media (max-width: 991.98px) {
-  .wrapper{
+  .wrapper {
     width: 50%;
   }
 }
 
 @media (max-width: 767.98px) {
-  
+  .superHost {
+    font-size: 10px;
+  }
+  .type,
+  .beds,
+  .rating {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 575.98px) {
-  .wrapper{
+  .wrapper {
     width: 100%;
   }
-
 }

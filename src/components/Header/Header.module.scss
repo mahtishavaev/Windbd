@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   z-index: 5;
-  width: 100%;  
+  width: 100%;
   background: #fff;
 }
 .inner {
@@ -82,8 +82,7 @@
   user-select: none;
 }
 
-
-.overlay{
+.overlay {
   background: rgba(79, 79, 79, 0.4);
   position: absolute;
   top: 0;
@@ -106,9 +105,9 @@
   }
   .location {
     width: 35%;
-    &::before{
+    &::before {
       display: block;
-      content: 'LOCATION';
+      content: "LOCATION";
       color: #333333;
       font-size: 9px;
       font-weight: 800;
@@ -116,9 +115,9 @@
   }
   .guests {
     width: 35%;
-    &::before{
+    &::before {
       display: block;
-      content: 'GUESTS';
+      content: "GUESTS";
       color: #333333;
       font-size: 9px;
       font-weight: 800;
@@ -176,7 +175,7 @@
   }
 }
 
-.guestsSearchParams{
+.guestsSearchParams {
   margin-left: 35%;
   padding: 15px;
   padding-left: 25px;
@@ -193,7 +192,7 @@
   margin-bottom: 10px;
 }
 
-.guestsCtrl{
+.guestsCtrl {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
@@ -212,11 +211,10 @@
   user-select: none;
 }
 
-.guestsCounter{
+.guestsCounter {
   font-size: 14px;
   font-weight: 700;
   margin-right: 15px;
-
 }
 
 @media (max-width: 1199.98px) {
@@ -238,35 +236,37 @@
   .inner {
     flex-direction: column;
   }
-  .searchBar{
+  .searchBar {
     width: 100%;
   }
-  .location{
+  .location {
     padding: 12px;
-    width: 35%;
+    width: auto;
+    flex: 1;
   }
-  .guests{
-    width: 35%;
+  .guests {
+    width: auto;
+    flex: 1;
     padding: 12px;
   }
-  .btn{
+  .btn {
     margin: auto;
   }
-  .logo{
+  .logo {
     margin-bottom: 15px;
     align-self: flex-start;
   }
-  .expanded{
-    .searchBar{
+  .expanded {
+    .searchBar {
       flex-direction: column;
     }
-    .location{
+    .location {
       width: 100%;
     }
-    .guests{
+    .guests {
       width: 100%;
     }
-    .btn{
+    .btn {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -277,19 +277,17 @@
   .locationsList {
     width: 100%;
   }
-  .locationItem{
+  .locationItem {
     margin: 0;
   }
-  .guestsSearchParams{
+  .guestsSearchParams {
     margin-left: 0;
   }
-  .searchParams{
+  .searchParams {
     margin-top: 30px;
     margin-bottom: 80px;
   }
 }
 
 @media (max-width: 575.98px) {
-
-  
 }
